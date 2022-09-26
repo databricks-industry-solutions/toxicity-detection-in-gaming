@@ -43,20 +43,14 @@ job_json = {
             {
                 "job_cluster_key": "gaming_cluster",
                 "notebook_task": {
-                    "notebook_path": f"00_context",
-                    "base_parameters": {
-                        "env": "test"
-                    }
+                    "notebook_path": f"00_context"
                 },
                 "task_key": "Gaming_00"
             },
             {
                 "job_cluster_key": "gaming_cluster",
                 "notebook_task": {
-                    "notebook_path": f"01_intro",
-                    "base_parameters": {
-                        "env": "test"
-                    }
+                    "notebook_path": f"01_intro"
                 },
                 "task_key": "Gaming_01",
                 "depends_on": [

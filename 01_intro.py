@@ -85,12 +85,7 @@
 
 # COMMAND ----------
 
-dbutils.widgets.text("env", "prod")
-env = dbutils.widgets.get("env")
-
-# COMMAND ----------
-
-# MAGIC %run ./config/notebook_config $env=$env
+# MAGIC %run ./config/notebook_config
 
 # COMMAND ----------
 
@@ -118,14 +113,17 @@ env = dbutils.widgets.get("env")
 
 # COMMAND ----------
 
-# MAGIC %sh echo """{\"username\":\"$kaggle_username\",\"key\":\"$kaggle_key\"}""" > /root/.kaggle/kaggle.json
+# MAGIC %sh -e
+# MAGIC cd /databricks/driver
+# MAGIC echo """{\"username\":\"$kaggle_username\",\"key\":\"$kaggle_key\"}""" > /root/.kaggle/kaggle.json
 # MAGIC chmod 600 /root/.kaggle/kaggle.json
 
 # COMMAND ----------
 
-# MAGIC %sh
-# MAGIC rm -r $tmpdir
-# MAGIC kaggle competitions download -p $tmpdir -o jigsaw-toxic-comment-classification-challenge 
+# MAGIC %sh -e
+# MAGIC rm -rf $tmpdir
+# MAGIC cd $tmpdir
+# MAGIC kaggle competitions download -p "$tmpdir" -c jigsaw-toxic-comment-classification-challenge 
 
 # COMMAND ----------
 
@@ -135,7 +133,7 @@ env = dbutils.widgets.get("env")
 
 # COMMAND ----------
 
-# MAGIC %sh
+# MAGIC %sh -e
 # MAGIC cd $tmpdir
 # MAGIC unzip -o jigsaw-toxic-comment-classification-challenge.zip
 # MAGIC unzip -o train.csv.zip
@@ -149,8 +147,8 @@ env = dbutils.widgets.get("env")
 
 # COMMAND ----------
 
-# MAGIC %sh
-# MAGIC kaggle datasets download -p $tmpdir -d devinanzelmo/dota-2-matches --force
+# MAGIC %sh -e
+# MAGIC kaggle datasets download -p $tmpdir -d devinanzelmo/dota-2-matches
 
 # COMMAND ----------
 
@@ -160,7 +158,7 @@ env = dbutils.widgets.get("env")
 
 # COMMAND ----------
 
-# MAGIC %sh
+# MAGIC %sh -e
 # MAGIC cd $tmpdir
 # MAGIC unzip -o dota-2-matches.zip 
 

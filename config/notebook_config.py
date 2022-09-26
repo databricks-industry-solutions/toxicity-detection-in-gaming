@@ -9,11 +9,6 @@ import json
 
 # COMMAND ----------
 
-dbutils.widgets.text("env", "prod")
-env = dbutils.widgets.get("env")
-
-# COMMAND ----------
-
 username = dbutils.notebook.entry_point.getDbutils().notebook().getContext().userName().get().split('@')[0]
 username_sql = re.sub('\W', '_', username)
 tmpdir = f"/dbfs/tmp/{username}/"
@@ -29,6 +24,8 @@ os.environ['kaggle_username'] = dbutils.secrets.get("solution-accelerator-cicd",
 
 # os.environ['kaggle_key'] = 'YOUR KAGGLE KEY HERE' # replace with your own credential here temporarily or set up a secret scope with your credential
 os.environ['kaggle_key'] = dbutils.secrets.get("solution-accelerator-cicd", "kaggle_key")
+
+os.environ['tmpdir'] = tmpdir
 
 # COMMAND ----------
 
