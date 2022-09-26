@@ -114,15 +114,19 @@
 # COMMAND ----------
 
 # MAGIC %sh -e
-# MAGIC cd /databricks/driver
+# MAGIC mkdir -p /root/.kaggle/
+# MAGIC 
 # MAGIC echo """{\"username\":\"$kaggle_username\",\"key\":\"$kaggle_key\"}""" > /root/.kaggle/kaggle.json
+# MAGIC 
 # MAGIC chmod 600 /root/.kaggle/kaggle.json
 
 # COMMAND ----------
 
 # MAGIC %sh -e
 # MAGIC rm -rf $tmpdir
+# MAGIC 
 # MAGIC cd $tmpdir
+# MAGIC 
 # MAGIC kaggle competitions download -p "$tmpdir" -c jigsaw-toxic-comment-classification-challenge 
 
 # COMMAND ----------
