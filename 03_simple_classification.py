@@ -25,19 +25,13 @@
 
 # MAGIC %md
 # MAGIC ##Step 1: Configure the Environment
-# MAGIC * To use this notebook, the cluster must be configured to support Spark NLP. Instructions for this configuration can be found [here](https://nlp.johnsnowlabs.com/docs/en/install#install-spark-nlp-on-databricks) and are summarized below.
-# MAGIC   
+# MAGIC * To use this notebook, the cluster must be configured to support Spark NLP. If you run this notebook as part of the automated Workflow created in the RUNME notebook; this configuration is already done for you. If you run this notebook interactively, please add the following library to the gaming_cluster created in RUNME.
 # MAGIC   * **Install libraries:**
-# MAGIC     * PyPi: `spark-nlp`
 # MAGIC     * Maven Coordinates:
-# MAGIC       * CPU: `com.johnsnowlabs.nlp:spark-nlp_2.12:3.4.2`
-# MAGIC       * GPU: `com.johnsnowlabs.nlp:spark-nlp-gpu_2.12:3.4.2`
-# MAGIC   
-# MAGIC   * **Add critical Spark config**:
-# MAGIC     * `spark.serializer org.apache.spark.serializer.KryoSerializer`
-# MAGIC     * `spark.kryoserializer.buffer.max 2000M`
+# MAGIC       * CPU: `com.johnsnowlabs.nlp:spark-nlp_2.12:4.0.0`
+# MAGIC       * GPU: `com.johnsnowlabs.nlp:spark-nlp-gpu_2.12:4.0.0`
 # MAGIC     
-# MAGIC   * **A note on cluster instances**: A CPU or GPU cluster can be used to run this notebook. 
+# MAGIC   * **A note on cluster instances**: A CPU or GPU cluster can be used to run this notebook. Feel free to edit the gaming_cluster and explore using GPU.
 
 # COMMAND ----------
 
