@@ -25,13 +25,14 @@
 
 # MAGIC %md
 # MAGIC ##Step 1: Configure the Environment
-# MAGIC * To use this notebook, the cluster must be configured to support Spark NLP. If you run this notebook as part of the automated Workflow created in the RUNME notebook; this configuration is already done for you. If you run this notebook interactively, please add the following library to the gaming_cluster created in RUNME.
+# MAGIC * To use this notebook, the cluster must be configured to support Spark NLP. We provide a RUNME notebook to automate the bulk of the configuration process. 
+# MAGIC * If you run this notebook as part of the automated Workflow created in the `RUNME` notebook, there is no additional configuration needed. If you run this notebook interactively, please add the following library to the `gaming_cluster` created in `RUNME`.
 # MAGIC   * **Install libraries:**
 # MAGIC     * Maven Coordinates:
 # MAGIC       * CPU: `com.johnsnowlabs.nlp:spark-nlp_2.12:4.0.0`
 # MAGIC       * GPU: `com.johnsnowlabs.nlp:spark-nlp-gpu_2.12:4.0.0`
 # MAGIC     
-# MAGIC   * **A note on cluster instances**: A CPU or GPU cluster can be used to run this notebook. Feel free to edit the gaming_cluster and explore using GPU.
+# MAGIC   * **A note on cluster instances**: A CPU or GPU cluster can be used to run this notebook. Feel free to edit the `gaming_cluster` and explore using a GPU cluster for potential speedup.
 
 # COMMAND ----------
 
