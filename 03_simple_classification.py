@@ -20,6 +20,8 @@
 # MAGIC   * Tune
 # MAGIC   * Evaluate
 # MAGIC   * Register
+# MAGIC   
+# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming
 
 # COMMAND ----------
 

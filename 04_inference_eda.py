@@ -13,6 +13,8 @@
 # MAGIC * Load a model from MLflow
 # MAGIC * Productionalize a streaming & batch inference pipeline
 # MAGIC * Explore the impact of toxicity
+# MAGIC 
+# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming
 
 # COMMAND ----------
 
