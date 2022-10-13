@@ -21,11 +21,22 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Step 1: Create the database
+# MAGIC ## Step 1: Setup notebook configuration
 
 # COMMAND ----------
 
 # MAGIC %run ./config/notebook_config
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Step 2: Reinitiate database environment
+
+# COMMAND ----------
+
+spark.sql(f"DROP DATABASE IF EXISTS {database_name} CASCADE")
+spark.sql(f"CREATE DATABASE {database_name} CASCADE")
+spark.sql(f"USE {database_name}")
 
 # COMMAND ----------
 
