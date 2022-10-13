@@ -35,7 +35,7 @@
 # COMMAND ----------
 
 spark.sql(f"DROP DATABASE IF EXISTS {database_name} CASCADE")
-spark.sql(f"CREATE DATABASE {database_name} CASCADE")
+spark.sql(f"CREATE DATABASE {database_name} location '{database_location}'")
 spark.sql(f"USE {database_name}")
 
 # COMMAND ----------
