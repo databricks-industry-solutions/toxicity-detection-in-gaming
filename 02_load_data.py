@@ -16,7 +16,7 @@
 # MAGIC * Create tables for easy access and querability.
 # MAGIC * Explore the dataset and relationships.
 # MAGIC 
-# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming
+# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming and more information about this solution accelerator at https://www.databricks.com/solutions/accelerators/toxicity-detection-for-gaming.
 
 # COMMAND ----------
 
