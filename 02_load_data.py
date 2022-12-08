@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming and more information about this solution accelerator at https://www.databricks.com/solutions/accelerators/toxicity-detection-for-gaming.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC <div >
 # MAGIC   <img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/solution-accelerator-logo.png"; width="50%">
@@ -15,8 +20,6 @@
 # MAGIC * Write the data out in `Delta` format.
 # MAGIC * Create tables for easy access and querability.
 # MAGIC * Explore the dataset and relationships.
-# MAGIC 
-# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming and more information about this solution accelerator at https://www.databricks.com/solutions/accelerators/toxicity-detection-for-gaming.
 
 # COMMAND ----------
 

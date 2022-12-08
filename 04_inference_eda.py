@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %md 
+# MAGIC You may find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming and more information about this solution accelerator at https://www.databricks.com/solutions/accelerators/toxicity-detection-for-gaming.
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC <div style="text-align: left">
 # MAGIC   <img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/solution-accelerator-logo.png"; width="50%">
@@ -13,8 +18,6 @@
 # MAGIC * Load a model from MLflow
 # MAGIC * Productionalize a streaming & batch inference pipeline
 # MAGIC * Explore the impact of toxicity
-# MAGIC 
-# MAGIC You may also find this series of notebooks at https://github.com/databricks-industry-solutions/toxicity-detection-in-gaming and more information about this solution accelerator at https://www.databricks.com/solutions/accelerators/toxicity-detection-for-gaming.
 
 # COMMAND ----------
 
