@@ -133,7 +133,7 @@ display(train.limit(1).filter(size(col('labels')) == 0))
 # MAGIC 
 # MAGIC Lets jump in and build our pipeline. 
 # MAGIC   * [Document Assembler](https://nlp.johnsnowlabs.com/docs/en/transformers#documentassembler-getting-data-in) creates the first annotation of type Document from the contents of our dataframe. This is used by the annotators in subsequent steps.
-# MAGIC   * Embeddings map words to vectors. A great explanation on this topic can be found [here](https://towardsdatascience.com/word-embeddings-exploration-explanation-and-exploitation-with-code-in-python-5dac99d5d795). The embeddings serve as an input for our classifer.
+# MAGIC   * Embeddings map words to vectors. A great explanation on this topic can be found [here](https://towardsdatascience.com/word-embeddings-exploration-explanation-and-exploitation-with-code-in-python-5dac99d5d795). The embeddings serve as an input for our classifier.
 # MAGIC   
 # MAGIC <div><img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/nlp_pipeline.png"; width="70%"></div>
 

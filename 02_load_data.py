@@ -18,7 +18,7 @@
 # MAGIC * Create a database for the tables to reside in.
 # MAGIC * Move the data downloaded in the notebook `01_intro` into object storage.
 # MAGIC * Write the data out in `Delta` format.
-# MAGIC * Create tables for easy access and querability.
+# MAGIC * Create tables for easy access and queriability.
 # MAGIC * Explore the dataset and relationships.
 
 # COMMAND ----------
