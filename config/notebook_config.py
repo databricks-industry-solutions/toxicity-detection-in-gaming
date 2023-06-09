@@ -13,7 +13,7 @@ username = dbutils.notebook.entry_point.getDbutils().notebook().getContext().use
 username_sql = re.sub('\W', '_', username)
 tmpdir = f"/dbfs/tmp/{username}/"
 tmpdir_dbfs = f"/tmp/{username}"
-database_name = f"gaming_{username_sql}"
+database_name = f"gaming_toxicity_{username_sql}"
 database_location = f"{tmpdir_dbfs}gaming"
 
 # COMMAND ----------
