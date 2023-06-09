@@ -14,7 +14,7 @@ username_sql = re.sub('\W', '_', username)
 tmpdir = f"/dbfs/tmp/{username}/"
 tmpdir_dbfs = f"/tmp/{username}"
 database_name = f"gaming_{username_sql}"
-database_location = f"{tmpdir}gaming"
+database_location = f"{tmpdir_dbfs}gaming"
 
 # COMMAND ----------
 

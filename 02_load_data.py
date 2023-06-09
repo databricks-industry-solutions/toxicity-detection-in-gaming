@@ -13,7 +13,7 @@
 
 # MAGIC %md
 # MAGIC ## Overview
-# MAGIC 
+# MAGIC
 # MAGIC ### In this notebook you:
 # MAGIC * Create a database for the tables to reside in.
 # MAGIC * Move the data downloaded in the notebook `01_intro` into object storage.
@@ -45,11 +45,11 @@ spark.sql(f"USE {database_name}")
 
 # MAGIC %md
 # MAGIC ## Step 3: Write Data to Delta Lake
-# MAGIC 
+# MAGIC
 # MAGIC In this section of the solution accelerator, we begin using [Delta Lake](https://delta.io/). 
 # MAGIC * Delta Lake is an open-source project that enables building a **Lakehouse architecture** on top of existing storage systems such as S3, ADLS, GCS, and HDFS.
 # MAGIC    * Information on the **Lakehouse Architecture** can be found in this [paper](http://cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf) that was presented at [CIDR 2021](http://cidrdb.org/cidr2021/index.html) and in this [video](https://www.youtube.com/watch?v=RU2dXoVU8hY)
-# MAGIC 
+# MAGIC
 # MAGIC * Key features of Delta Lake include:
 # MAGIC   * **ACID Transactions**: Ensures data integrity and read consistency with complex, concurrent data pipelines.
 # MAGIC   * **Unified Batch and Streaming Source and Sink**: A table in Delta Lake is both a batch table, as well as a streaming source and sink. Streaming data ingest, batch historic backfill, and interactive queries all just work out of the box. 
@@ -59,9 +59,10 @@ spark.sql(f"USE {database_name}")
 # MAGIC   * **Open Format**: Stored as Parquet format in blob storage.
 # MAGIC   * **Audit History**: History of all the operations that happened in the table.
 # MAGIC   * **Scalable Metadata management**: Able to handle millions of files are scaling the metadata operations with Spark.
-# MAGIC   
-# MAGIC   
-# MAGIC <img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/delta-lake-raw.png"; width="50%" />
+# MAGIC
+# MAGIC <div >
+# MAGIC   <img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/delta-lake-raw.png"; width="50%">
+# MAGIC </div>
 
 # COMMAND ----------
 
@@ -81,7 +82,7 @@ testDF.write \
 
 # MAGIC %md
 # MAGIC ##### 3.1: Ingest Game Data into Delta Lake
-# MAGIC 
+# MAGIC
 # MAGIC Loop over the Dota 2 data files to:
 # MAGIC * Move files to object storage
 # MAGIC * Load data into Delta tables for analysis
@@ -119,7 +120,7 @@ for file in ['match','match_outcomes','player_ratings','players','chat','cluster
 
 # MAGIC %md
 # MAGIC ## Step 4: Exploring the data
-# MAGIC 
+# MAGIC
 # MAGIC Toxicity tables Relationship Diagram
 # MAGIC <div>
 # MAGIC   <img src="https://cme-solution-accelerators-images.s3-us-west-2.amazonaws.com/toxicity/toxicity-erd.png"; width="40%" />
@@ -166,14 +167,14 @@ for file in ['match','match_outcomes','player_ratings','players','chat','cluster
 
 # MAGIC %md
 # MAGIC ## Next Steps
-# MAGIC 
+# MAGIC
 # MAGIC * Build embedding and classification pipelines.
 
 # COMMAND ----------
 
 # MAGIC %md
 # MAGIC Copyright Databricks, Inc. [2022]. The source in this notebook is provided subject to the [Databricks License](https://databricks.com/db-license-source).  All included or referenced third party libraries are subject to the licenses set forth below.
-# MAGIC 
+# MAGIC
 # MAGIC |Library Name|Library license | Library License URL | Library Source URL |
 # MAGIC |---|---|---|---|
 # MAGIC |Spark-nlp|Apache-2.0 License| https://nlp.johnsnowlabs.com/license.html | https://www.johnsnowlabs.com/
