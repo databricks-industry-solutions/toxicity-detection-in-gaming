@@ -25,6 +25,7 @@
 
 # DBTITLE 0,Install util packages
 # MAGIC %pip install git+https://github.com/databricks-academy/dbacademy@v1.0.13 git+https://github.com/databricks-industry-solutions/notebook-solution-companion@safe-print-html --quiet --disable-pip-version-check
+# MAGIC dbutils.library.restartPython()
 
 # COMMAND ----------
 
@@ -107,7 +108,7 @@ job_json = {
                 "libraries": [
                     {
                         "maven": {
-                            "coordinates": "com.johnsnowlabs.nlp:spark-nlp_2.12:4.0.0"
+                            "coordinates": "com.johnsnowlabs.nlp:spark-nlp_2.12:4.4.3"
                         }
                     }
                 ],
@@ -126,7 +127,7 @@ job_json = {
                 "libraries": [
                     {
                         "maven": {
-                            "coordinates": "com.johnsnowlabs.nlp:spark-nlp_2.12:4.0.0"
+                            "coordinates": "com.johnsnowlabs.nlp:spark-nlp_2.12:4.4.3"
                         }
                     }
                 ],
@@ -142,7 +143,7 @@ job_json = {
             {
                 "job_cluster_key": "gaming_cluster",
                 "new_cluster": {
-                    "spark_version": "10.4.x-cpu-ml-scala2.12",
+                    "spark_version": "12.2.x-cpu-ml-scala2.12",
                 "spark_conf": {
                     "spark.databricks.delta.formatCheck.enabled": "false"
                     },
